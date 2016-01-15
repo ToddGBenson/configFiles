@@ -1,0 +1,23 @@
+set syn=on
+set foldmethod=marker
+map #3 a *Done*
+map #2 a *Pending*
+map #1 a *ToDo* 
+set shell=powershell
+
+syn match hyperLinks 'https://.*'
+syn match hyperLinks1 'http://.*'
+syn match hyperLinks2 'file://.*'
+syn match project '^-.*:{{{'
+syn match project1 '}}}'
+syn match done '*Done\S'
+syn match pending '*Pending\S'
+syn match future '*ToDo\S'
+hi def link done WarningMsg
+hi def link pending LineNr
+hi def link future Type
+hi def link project Special
+hi def link project1 Special
+hi def link hyperLinks Underlined
+hi def link hyperLinks1 Underlined
+hi def link hyperLinks2 Underlined
