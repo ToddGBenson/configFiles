@@ -1,23 +1,26 @@
+colo darkblue
 set syn=on
 set foldmethod=marker
 map #3 a *Done*
-map #2 a *Pending*
+map #2 a *Work*
 map #1 a *ToDo* 
 set shell=powershell
 
+syn match title 'Security Anchor'
 syn match hyperLinks 'https://.*'
 syn match hyperLinks1 'http://.*'
 syn match hyperLinks2 'file://.*'
 syn match project '^-.*:{{{'
 syn match project1 '}}}'
 syn match done '*Done\S'
-syn match pending '*Pending\S'
+syn match pending '*Work\S'
 syn match future '*ToDo\S'
 hi def link done WarningMsg
-hi def link pending LineNr
+hi title ctermfg=White ctermbg=Red cterm=bold
+hi pending ctermfg=Yellow ctermbg=NONE cterm=bold
 hi def link future Type
-hi def link project Special
-hi def link project1 Special
-hi def link hyperLinks Underlined
-hi def link hyperLinks1 Underlined
-hi def link hyperLinks2 Underlined
+hi project ctermfg=Brown 
+hi project1 ctermfg=Brown
+hi hyperLinks ctermfg=Blue ctermbg=NONE cterm=underline
+hi hyperLinks1 ctermfg=Blue ctermbg=NONE cterm=underline
+hi hyperLinks2 ctermfg=Blue ctermbg=NONE cterm=underline

@@ -1,0 +1,63 @@
+Security Anchor
+ *ToDo* List security requirements for Direct Access
+ *Done* Send Todd a list of security concerns
+ *Done* Keypass on pairing station
+ *Done* Add Pivitol stories
+        - JCL Update
+	- Direct Access
+ *Work* SSC and Fortify current versions for beach team
+- Mobile :{{{
+	Develop program
+	https://www.owasp.org/index.php/OWASP_Mobile_Security_Project
+	https://www.owasp.org/index.php/Projects/OWASP_Mobile_Security_Project_-_Top_Ten_Mobile_Risks
+	https://www.owasp.org/index.php/Projects/OWASP_Mobile_Security_Project_-2015_Scratchpad
+	file:///C:/Users/gl42ben/Desktop/OWASP%20Mobile%20App%20Checklist%20v1.0.pdf
+	https://drive.google.com/file/d/0BxOPagp1jPHWczhwYjRQNzZIekU/view
+	https://drive.google.com/file/d/0BxOPagp1jPHWQjVxV3RaZ1k1WTg/view
+	}}}
+- Skillset :{{{
+	Javascript
+	Mobile
+	}}}
+- eLearning :{{{
+	}}}
+- DAST :{{{ 
+	For developers
+	Schedule
+	Align with security
+	}}}
+- Future :{{{
+	Hosts (os/db)
+	Number of projects
+	Work with DevOps on incident handling
+	Jenkins hardening
+	}}}
+- Projects :{{{
+	Mobile project  
+	CSAA-FuzzDB
+	DOM-based XSS
+	Security Dashboard
+	}}}
+- SAMM  :{{{
+	SAST
+	DAST
+	Security Awareness
+	Incident Response
+	Continuous Deployment
+	- TDD
+	- AppSensor
+	}}}
+- Personal Projects :{{{
+  Raspberry Pi
+	Kali
+	Coder
+	Network Monitoring
+  Pineapple
+  - Put it on a Mac
+  }}}
+- Direct Access :{{{
+  *Done* JWT in cookie or header? Cookies! 
+  State vs. Stateless
+  Nonce implementation in OpenID
+  OpenID flows - authentication vs. hybrid
+  }}}
