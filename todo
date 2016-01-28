@@ -4,7 +4,6 @@ set foldmethod=marker
 map #3 a *Done*
 map #2 a *Work*
 map #1 a *ToDo* 
-set shell=powershell
 
 syn match title 'Security Anchor'
 syn match hyperLinks 'https://.*'

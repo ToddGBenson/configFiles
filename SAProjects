@@ -6,6 +6,7 @@ Security Anchor
         - JCL Update
 	- Direct Access
  *Work* SSC and Fortify current versions for beach team
+ *Work* Add 10 security stories a day. Include logging and sensore stories.
 - Mobile :{{{
 	Develop program
 	https://www.owasp.org/index.php/OWASP_Mobile_Security_Project
@@ -60,4 +61,6 @@ Security Anchor
   State vs. Stateless
   Nonce implementation in OpenID
   OpenID flows - authentication vs. hybrid
+  *ToDo* Add security stories
+  *ToDo* Add AppSensor stories
   }}}
