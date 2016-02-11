@@ -1,17 +1,26 @@
 Security Anchor
  *ToDo* List security requirements for Direct Access
- *ToDo* Email Marcia
+ *Done* Email Marcia
  *ToDo* Scan Xcode project
- *ToDo* COntact Fortify
- *Done* Send Todd a list of security concerns
- *Done* Keypass on pairing station
- *Done* Add Pivitol stories
-        - JCL Update
-	- Direct Access
- *Work* SSC and Fortify current versions for beach team
  *Work* Add 10 security stories a day. Include logging and sensore stories.
+ *ToDo* Work with mobile on 4 stories
+ *ToDo* Jenkins and SecDash
+ *ToDo* DA Risk acceptance
+ *ToDo* iOS Fortify
+ *ToDo* CSP Demo and security items with DA team
+ *ToDo* Enter EZ Pay stories
+ *ToDo* End-to-end Android and iOS
+ *ToDo* End-to-end MyPolicy
 - Mobile :{{{
 	Develop program
+	iOS/Android
+	How to update
+	Dynamic testing
+	Static Testing
+	Vulnerable applications
+	Checklist
+	Jailbreak devices
+
 	https://www.owasp.org/index.php/OWASP_Mobile_Security_Project
 	https://www.owasp.org/index.php/Projects/OWASP_Mobile_Security_Project_-_Top_Ten_Mobile_Risks
 	https://www.owasp.org/index.php/Projects/OWASP_Mobile_Security_Project_-2015_Scratchpad
@@ -41,6 +50,7 @@ Security Anchor
 	CSAA-FuzzDB
 	DOM-based XSS
 	Security Dashboard
+        CSP Collector
 	}}}
 - SAMM  :{{{
 	SAST
@@ -66,4 +76,11 @@ Security Anchor
   OpenID flows - authentication vs. hybrid
   *ToDo* Add security stories
   *ToDo* Add AppSensor stories
+  *ToDo* Figure out how to get a SSL cert
+  *ToDo* DA Jenkins build - add security script
   }}}
+- Seucrity Dashboard :{{{
+  Jenkins Implementation - Have security running with all nightly jobs
+  Send a message to a slack channel
+  Get a VM for a web server
+}}}
