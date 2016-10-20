@@ -16,7 +16,8 @@ git clone https://github.com/troyhunt/PineappleSurprise.git /opt/pineapple
 wget wifipineapple.com/wp6.sh -o /opt/pineapple/wp6.sh
 chmod +x /opt/pineapple/wp6.sh
 source /opt/gauntlt/install_gauntlt_deps.sh
-bash /opt/gauntlt/ready_to_rumble.sh
-cd /opt/discover
-./update.sh
+#cd /opt/discover
+#./update.sh
 passwd
+ssh-keygen
+bash /opt/gauntlt/ready_to_rumble.sh
