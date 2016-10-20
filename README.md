@@ -4,7 +4,7 @@ This is a setup script for Kali Linux. It installs:
 
 * hexchat
 * emacs
-* My emcas.d
+* My emacs.d
 * SecList
 * testssl.sh
 * checkHeaders
