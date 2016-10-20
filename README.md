@@ -16,9 +16,9 @@ This is a setup script for Kali Linux. It installs:
 
 It also:
 * Starts and initialize the Metasploit database
-* apt-get update
-* apt-get upgrade
-* installs Gauntlt dependencies
+* Runs apt-get update
+* Runs apt-get upgrade
+* Installs Gauntlt dependencies
 * Runs update for discover
 
 Also included is setupKali.txt with some post install steps
