@@ -15,7 +15,7 @@ This is a setup script for Kali Linux. It installs:
 * Pineapple wp6.sh
 
 It also:
-* Starts and initialize the Metasploit database
+* Starts and initializes the Metasploit database
 * Runs apt-get update
 * Runs apt-get upgrade
 * Installs Gauntlt dependencies
