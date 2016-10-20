@@ -1,6 +1,9 @@
 
-Kali
+# Change hostname
 
+vi /etc/hostname
+vi /etc/hosts
+------------------------------------------------------------------------------------------------------
 
 # Terminal
 
@@ -111,3 +114,52 @@ Restart Firefox
 
 https://slack.com/downloads/linux
 dpkg --install /root/Downloads/slack-desktop-*.deb
+------------------------------------------------------------------------------------------------------
+
+# Create new user
+
+useradd -m <username>
+passwd <username>
+usermod -a -G sudo <username>
+chsh -s /bin/bash <username>
+------------------------------------------------------------------------------------------------------
+
+# Rubber Ducky
+
+1. Place Micro SD card in the reader
+2. Insert reader into the computer
+3. Create script, save as "source.txt"
+4. Run java -jar /opt/ducky/encoder.jar -i source.txt
+5. Copy "inject.bin" onto the SD card
+6. Remove SD card from the reader and put into the Ducky
+------------------------------------------------------------------------------------------------------
+
+# Lan Turtle
+
+IP Address: 172.16.84.1
+
+Default username - root
+Defaulr password - sh3llz
+
+Setup autoSSH
+------------------------------------------------------------------------------------------------------
+
+# WiFi Pineapple
+
+IP Address: 172.16.42.1
+
+Connect Pinapple to the computer
+Run /opt/pineapple/wp6.sh
+
+Setup autoSSH
+------------------------------------------------------------------------------------------------------
+
+# KeyLama
+
+Press vmp to exit logging mode
+------------------------------------------------------------------------------------------------------
+
+# Git
+
+To update a clone 'git fetch'
+------------------------------------------------------------------------------------------------------
