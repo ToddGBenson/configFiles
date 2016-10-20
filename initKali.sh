@@ -21,3 +21,5 @@ source /opt/gauntlt/install_gauntlt_deps.sh
 passwd
 ssh-keygen
 bash /opt/gauntlt/ready_to_rumble.sh
+which emacs
+which hexchat
