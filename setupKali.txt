@@ -116,6 +116,12 @@ https://slack.com/downloads/linux
 dpkg --install /root/Downloads/slack-desktop-*.deb
 ------------------------------------------------------------------------------------------------------
 
+# Install Discover scripts
+
+cd /opt/discover/
+./update.sh
+------------------------------------------------------------------------------------------------------
+
 # Create new user
 
 useradd -m <username>
