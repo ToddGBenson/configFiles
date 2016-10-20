@@ -64,6 +64,7 @@ LastPass
 Grammarly
 XSS Me
 SQL Inject Me
+httprequester
 
 # Firefox proxy
 
