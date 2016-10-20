@@ -2,6 +2,7 @@
 service postgresql start
 msfdb init
 apt-get update
+apt-get upgrade
 apt-get install -y hexchat
 apt-get install -y emacs
 git clone --recursive git://github.com/magnars/.emacs.d.git ~/.emacs.d
