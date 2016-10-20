@@ -1,0 +1,113 @@
+
+Kali
+
+
+# Terminal
+
+Edit > Profile Preferences
+Colors: Uncheck Use transparent background
+------------------------------------------------------------------------------------------------------
+
+# Disable screen lock
+
+Top right icon > tools icon > Power
+Power Saving > Blank screen: Never
+Back arrow
+Privacy > Screen Lock > Automatic Screen Lock: Off
+------------------------------------------------------------------------------------------------------
+
+# gedit
+
+Preferences
+View: Display line numbers, Highlight current line
+Editor: Tab width 5, Insert spaces instead of tabs
+Color Scheme: Oblivion
+------------------------------------------------------------------------------------------------------
+
+# SSH
+ssh-keygen                                       Create new keys
+
+/etc/ssh/sshd_config                             Edit config file
+PermitRootLogin yes                              Change to yes
+AuthorizedKeysFile                               Uncomment
+
+service ssh start                                Start ssh
+netstat -antp | grep ssh                         Verify the service is running
+update-rc.d ssh enable                           Enable ssh to start at boot time
+update-rc.d ssh disable                          Disable ssh from starting at boot time
+ssh root@targetIP                                SSH to server on standard port
+ssh root@targetIP -p 2222                        SSH to server on non-stardard port (2222)
+ssh root@targetIP -X
+------------------------------------------------------------------------------------------------------
+
+# Install VMware Tools
+
+VMware > Virtual Machine > Install VMware Tools > Install
+cp /media/cdrom/VMwareTools-<version>.tar.gz /root/
+cd /root/
+tar zxvf VMwareTools-<version>.tar.gz 
+cd vmware-tools-distrib/
+./vmware-install.pl 
+Accept all the defaults
+reboot
+------------------------------------------------------------------------------------------------------
+
+Burp Suite
+
+
+# Jython
+
+www.jython.org/downloads.html
+Download Jython Standalone Jar
+Move to /Applications/
+------------------------------------------------------------------------------------------------------
+
+# Firefox plugins (https://addons.mozilla.org/en-US/firefox/collections/anonymous-ea5ff367908de6c75a8d05682ffa36a1/security-tools/)
+
+Cookies Manager+
+FoxyProxy Standard
+Live HTTP headers (clone)
+User-Agent Switcher
+Wappalyzer
+Builtwith
+Tamper Data
+HTML5 Local Storage
+Hackbar
+LastPass
+Grammarly
+XSS Me
+SQL Inject Me
+
+# Firefox proxy
+
+Preferences > Advanced > Network > Settings
+Manual proxy configuration
+HTTP Proxy: 127.0.0.1
+Port: 8080
+Use this proxy server for all protocols.
+No proxy for: delete anything in here
+------------------------------------------------------------------------------------------------------
+
+# Set up
+
+Open Burp
+New project on disk > Choose file > burp-project > Save
+Name: Base
+Next
+Use Burp defaults > Start Burp
+------------------------------------------------------------------------------------------------------
+
+# Certificate
+
+Open Firefox to http://burp
+CA Certificate > Save File
+Preferences > Advanced > Certificates > View Certificates > Authorities > Import
+Select the certificate that you previously downloaded > Open
+Check Trust this CA to identify websites > OK > OK
+Restart Firefox
+------------------------------------------------------------------------------------------------------
+
+# Slack
+
+https://slack.com/downloads/linux
+dpkg --install /root/Downloads/slack-desktop-*.deb
