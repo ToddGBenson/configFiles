@@ -1,10 +1,20 @@
-git clone https://github.com/nmap/nmap.git /Applications/nmap
-git clone https://github.com/sqlmapproject/sqlmap.git /Applications/sqlmap
-git clone https://github.com/spinkham/skipfish.git /Applications/skipfish
-git clone https://github.com/sullo/nikto.git /Applications/nikto
-git clone https://github.com/danielmiessler/SecLists.git ~/Documents/SecList
-git clone https://github.com/drwetter/testssl.sh.git /Applications/testSSL
-git clone https://github.com/ToddBenson/SecurityDocs.git ~/Documents/Security
-git clone https://github.com/ToddBenson/configFiles.git ~/Documents/config
-## Download Wireshark, SoapUI, ZAP, and Burp
-## Firefox Plugins - Web Developer, Tamper Data, Foxy Proxy, Cookie Manager, XSS Me
+#!/bin/bash
+service postgresql start
+msfdb init
+apt-get install -y emacs
+git clone --recursive git://github.com/magnars/.emacs.d.git ~/.emacs.d
+git clone https://github.com/danielmiessler/SecLists.git /opt/seclist
+git clone https://github.com/drwetter/testssl.sh.git /opt/testssl
+git clone https://github.com/ToddBenson/checkHeaders.git /opt/checkHeaders
+git clone https://github.com/leebaird/discover /opt/discover/
+git clone https://github.com/gauntlt/gauntlt /opt/gauntlt
+apt-get install -y hexchat
+git clone https://github.com/hak5darren/USB-Rubber-Ducky.git /opt/ducky
+git clone https://github.com/troyhunt/PineappleSurprise.git /opt/pineapple
+wget wifipineapple.com/wp6.sh /opt/pineapple
+chmod +x /opt/pineapple/wp6.sh
+cd gauntlt
+source ./install_gauntlt_deps.sh
+bash ./ready_to_rumble.sh
+cd /opt/discover
+/update.sh
