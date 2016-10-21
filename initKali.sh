@@ -13,9 +13,11 @@ git clone https://github.com/leebaird/discover /opt/discover/
 git clone https://github.com/gauntlt/gauntlt /opt/gauntlt
 git clone https://github.com/hak5darren/USB-Rubber-Ducky.git /opt/ducky
 git clone https://github.com/troyhunt/PineappleSurprise.git /opt/pineapple
-wget wifipineapple.com/wp6.sh -o /opt/pineapple/wp6.sh
+cd /opt/pineapple
+wget wifipineapple.com/wp6.sh
 chmod +x /opt/pineapple/wp6.sh
-source /opt/gauntlt/install_gauntlt_deps.sh
+cd /opt/gauntlt
+source ./install_gauntlt_deps.sh
 #cd /opt/discover
 #./update.sh
 passwd
