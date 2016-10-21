@@ -18,10 +18,10 @@ wget wifipineapple.com/wp6.sh
 chmod +x /opt/pineapple/wp6.sh
 cd /opt/gauntlt
 source ./install_gauntlt_deps.sh
-#cd /opt/discover
-#./update.sh
+cd /opt/discover
+./update.sh
 passwd
-ssh-keygen
 bash /opt/gauntlt/ready_to_rumble.sh
 which emacs
 which hexchat
+echo "Reun ssh-keygen to update the ssh keys."
