@@ -111,12 +111,50 @@ chsh -s /bin/bash <username>
 
 # Rubber Ducky
 
-1. Place Micro SD card in the reader
-2. Insert reader into the computer
-3. Create script, save as "source.txt"
-4. Run java -jar /opt/ducky/Encoder/encoder.jar -i source.txt
-5. Copy "inject.bin" onto the SD card
-6. Remove SD card from the reader and put into the Ducky
+Ducky Script syntax is simple. Each command resides on a new line and may have options follow. Commands are written
+in ALL CAPS. Most commands invoke keystrokes, key-combos or strings of text, while some offer delays or pauses.
+
+REM - Similar to the REM command in Basic and other languages, lines beginning with REM will not be processed. 
+DEFAULTDELAY n - defines how long (in milliseconds * 10) to wait between each subsequent command.
+DELAY n - creates a momentary pause in the ducky script (in milliseconds * 10) from 1 to 10000.
+STRING - processes the text following taking special care to auto-shift. STRING can accept a single or multiple characters.
+      a..z A..Z 0..9 !..) `~ += _- ”' :; <, >. ?/ \ |
+GUI - Emulates the Windows-Key, sometimes referred to as the Super-key.
+MENU - Emulates the App key, sometimes referred to as the menu key or context menu key.
+SHIFT - can be used when navigating fields to select text, among other functions. Accept the following:
+     DELETE, HOME, INSERT, PAGEUP, PAGEDOWN, WINDOWS, GUI, UPARROW, DOWNARROW, LEFTARROW, RIGHTARROW, TAB
+ALT - accepts END, ESC, ESCAPE, F1…F12, Single Char, SPACE, TAB
+CTRL - accepts BREAK, PAUSE, F1…F12, ESCAPE, ESC, Single Char 
+Arrow Keys - DOWNARROW, UPARROW, LEFTARROW, RIGHTARROW
+More Keys - BREAK, PAUSE, CAPSLOCK, DELETE, END, ESC, ESCAPE, HOME, INSERT, NUMLOCK,
+PAGEUP, PAGEDOWN, PRINTSCREEN, SCROLLLOCK, SPACE, TAB
+
+For complete ducky script syntax, example payloads and tutorials visit USBRubberDucky.com
+
+
+Getting Started
+
+1. Write a payload in your text editor of choice
+Any standard ASCII text editor can be used, such as notepad, vi, nano, emacs or textedit. For example, open notepad and
+write “STRING Hello World” (without quotes). Save the file as mypayload.txt. Reference the Ducky Script on the next page
+for syntax details or visit USBRubberDucky.com for example payloads.
+
+2. Encode your payload with the Duck Encoder utility
+Download the latest version of duckencoder from USBRubberDucky.com. This cross-platform command line Java app
+encodes the ASCII text file into a binary ready to be processed by the USB Rubber Ducky.
+java -jar duckencode.jar -i mypayload.txt -o inject.bin Usage:
+
+3. Copy the encoded payload to the Micro SD card
+Place the inject.bin file created by the Duck Encoder on the root of the Micro SD card. Your payload is now ready.
+
+4. Insert the Micro SD card into the USB Rubber Ducky
+Slide the Micro SD card completely into the reader on the USB Rubber Ducky. The card will rest flush with the board.
+
+5. Plug the USB Rubber Ducky into your target PC
+The USB Rubber Ducky will be recognized as a keyboard and automatically begin executing your payload. In the example
+above the text "Hello World" is typed. Press the micro button above the Micro SD card slot to repeat the payload.
+
+Alternatively a cloud based Ducky Script editor and Duck Encoder can be found at USBRubberDucky.com
 ------------------------------------------------------------------------------------------------------
 
 # Lan Turtle
