@@ -46,7 +46,6 @@ Burp Suite
 
 www.jython.org/downloads.html
 Download Jython Standalone Jar
-Move to /Applications/
 ------------------------------------------------------------------------------------------------------
 
 # Firefox plugins (https://addons.mozilla.org/en-US/firefox/collections/anonymous-ea5ff367908de6c75a8d05682ffa36a1/security-tools/)
@@ -101,11 +100,6 @@ https://slack.com/downloads/linux
 dpkg --install /root/Downloads/slack-desktop-*.deb
 ------------------------------------------------------------------------------------------------------
 
-# Install Discover scripts
-
-cd /opt/discover/
-./update.sh
-------------------------------------------------------------------------------------------------------
 
 # Create new user
 
@@ -120,7 +114,7 @@ chsh -s /bin/bash <username>
 1. Place Micro SD card in the reader
 2. Insert reader into the computer
 3. Create script, save as "source.txt"
-4. Run java -jar /opt/ducky/encoder.jar -i source.txt
+4. Run java -jar /opt/ducky/Encoder/encoder.jar -i source.txt
 5. Copy "inject.bin" onto the SD card
 6. Remove SD card from the reader and put into the Ducky
 ------------------------------------------------------------------------------------------------------

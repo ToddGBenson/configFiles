@@ -24,4 +24,4 @@ passwd
 bash /opt/gauntlt/ready_to_rumble.sh
 which emacs
 which hexchat
-echo "Run ssh-keygen to update the ssh keys."
+echo "Delete ssh keys and run ssh-keygen to create new keys."
