@@ -21,6 +21,8 @@ source ./install_gauntlt_deps.sh
 cd /opt/discover
 ./update.sh
 passwd
+echo "Tools installed:"
+ls /opt/
 bash /opt/gauntlt/ready_to_rumble.sh
 which emacs
 which hexchat
