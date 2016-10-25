@@ -1,0 +1,137 @@
+
+# First Contact
+
+Subject: [Host/Application] assessment for <PROJECT> - #<TICKET>
+CC: Ryan Stinson
+ 
+Good morning <Contact Name>. 
+I have received your security assessment request, and I will be working with you for the [host/application] assessment of <PROJECT>.  I have created ticket #[ticket] for tracking the assessment. 
+My understanding is that we will be assessing [URLs/hosts]. I will contact you  with a short list of questions, some of which will include: 
+	• What technologies are hosted on the servers (operating systems, databases, web servers, etc.)? 
+	• Are there any firewalls or other perimeter devices between our tools and the hosts that may require special rules to allow assessment traffic? 
+	• What are the URLs for web applications being assessed? 
+	• Do you have a system security plan and a network diagram? 
+	• Who are the points of contacts (system owner, project manager, system administrators, etc.)? 
+After we speak on <DAY>, I will schedule a kickoff meeting sometime during the week, probably <DAY>, for all of the points of contacts to review the assessment process, discuss the scope, assessment limitations or restrictions, etc. I will also create a Security Assessment Plan (SAP), which will be delivered before the kickoff meeting. Additionally, we will request access to the servers no later than Friday <DAY> to verify access and credentials and to ensure we can begin first thing <BEGINNING DAY> in the morning.
+If you have any questions about the assessment process, such as the next steps or any detail concerning the process, please do not hesitate to contact me or Ryan Stinson. 
+ 
+Thank you,
+---------------------------------------------------------------------------
+
+# Followup
+
+Good Afternoon
+
+SOC Ticket#: 93794
+
+Thank you for taking the time to speak with me earlier.   To follow up on our conversation, I will be performing an assessment of your application residing at “coop.cit.uscourts.gov”.  The assessment will begin on 17 December and is expected to conclude on 31 December.  Please confirm that the URL we discussed is accurate for your application.
+
+The assessment will entail automated vulnerability scanning of the application, host operating system, and any database that may be associated with the application.  Additionally manual testing will be conducted to confirm the application does not disclose sensitive information, is configured using security best practices, and utilizes proper input validation techniques.
+
+At the conclusion of the assessment I will provide you a Security Assessment Report (SAR) which will aid you in the understanding and remediation of any discovered vulnerabilities as well as the SOC ticket number associated with this assessment.  In the event High Risk vulnerabilities are discovered during testing, I will be sure to notify you in a timely manner.  In the meanwhile, if you have any additional questions for me, please feel free to reach out.
+
+Please be aware that the security testing process does not include contacting the NMF or other engineers for any work that may be necessary on the firewalls, DNS, or other network devices.  
+
+The court will need to contact NMF separately in order to get that process started with a HEAT ticket and change request.
+
+Thank you and I look forward to working with you.
+-----------------------------------------------------------------------------
+
+# Kickoff Meeting
+
+Subject: <PROJECTNAME> Security Assessment Kickoff Meeting
+Location: Telecon and AT&T Connection: Information below
+Required: Security Assessor(s), Ryan, PMs and technical team members
+FYI: Sharon Rogers
+The purpose of this meeting is to discuss the plans for the upcoming <PROJECTNAME> security assessment.  We will provide a Security Assessment Plan document in advance of the meeting.
+Please let me know if there are other stakeholders who should be invited.  Please also let me know if you have any questions in the meantime.  Thanks.
+To connect to the Web Conference:
+=============================
+Click here: https://connect16.uc.att.com/uscourts/meet/?ExEventID=89135177
+TO CONNECT WITH YOUR *TELEPHONE ONLY* (no computer):
+===================================================
+1. Choose one of the following numbers to dial:
+If you are calling from an office location with on-site number(s) (listed below), try this number first. If you do not have on-site access, or you are not a member of the host's company/organization, use one of the other numbers shown.
+* Toll-Free Number (in USA): (877)336-1828.
+* Caller-Paid number: (404)443-6396
+* Blackberry (Toll-Free Number): 8773361828x9135177#
+2. When prompted, enter the Meeting Access Code: 9135177#
+------------------------------------------------------------------------------
+
+# Notifications
+
+TO: IDS@USCOURTS, Security Operations Center/DCA/AO/USCOURTS
+CC: AOAZml_Security, Ryan Stinson, PMs and technical team members
+Subject: OITS security assessment notification - <PROJECTNAME>
+The Information Technology Security Office will be running a security assessment against the following IP Address(es) - 
+ 
+<IP ADDRESSES>
+The testing activity will originate from: 
+ 
+<ATTACK IP ADDRESSES>
+ 
+Testing is expected to run through the day <TODAY>.
+ 
+If there are any questions, contact <TESTER> at <PHONENUMBER>. 
+------------------------------------------------------------------------------
+
+# Test Completion
+
+Good afternoon.
+ 
+Security testing for <Court site> is complete. 
+
+Preliminary results:
+The following findings were identified and are being more thoroughly analyzed
+
+High risk
+- <include enough information that the issue can be fixed> 
+- Example: Missing OS patches (MS Windows and Red Hat Linux)
+- Example: Missing 3rd party patches (Java, WinZip, Cold Fusion, MS SQL express, MS Office, Symantec Endpoint Protection, and Flash Player). 
+ 
+Moderate risk (incomplete list)
+- Example: Lack of NLA authentication for RDP. NLA can be enabled under RD Session Host, with Group Policy, or in the Remote section under System Properties.
+- Example: SMB signing was not enabled. SMB signing can be enabled in Local Security Policy or Group Policy under Microsoft network server: Digitally sign communications (always) 
+- Example: Weak TS (Terminal Service) encryption level. The TS encryption level can be set in the RD Session Host utility and should be set to "High" or "FIPS Compliant".
+- Example: Use of FTP. The FTP service should be disabled.
+ 
+Next Steps:
+- If you haven't already, network or DNS change requests may be submitted to the NMF in parallel with security testing and security test reporting
+- The Security Assessment Report (SAR) is being drafted and will include our more rigorous risk analysis. In the meantime, the risk levels above are subject to change.  
+- Analysis will be ongoing this week, until <date>. Please continue to allow access to the server(s) and application(s). Any access would be minimal and have no effect of the data or performance of the system(s).
+- All high risk vulnerabilities must be addressed before going live (1)
+  -- If you have a resolution in place by <date>, then I can incorporate validation testing into the report that is currently in draft
+  -- If not, please submit a request for validation testing to http://questionnaire.spar.ao.dcn
+- All public-facing servers and supporting servers must have Host-based Intrusion Prevention System (HIPS) software installed (2). Please contact the SOC to ensure HIPS is implemented (http://soc.ao.dcn/HIPS/)
+
+Thank you for your participation in the security testing process. Please don't hesitate to let me, if I can answer any questions.
+
+
+(1) per the JCUS IT Security Risk Management and Escalation Policy (http://jnet.ao.dcn/sites/default/files/pdf/National_Security_Risk_Mgmt_Policy_10_10_13.pdf)
+(2) per the JCUS Public-Facing Websites policy statements (http://jnet.ao.dcn/sites/default/files/pdf/it_security_policy_statements_public_facing_websites.pdf)
+------------------------------------------------------------------------------
+
+# Exit Briefing
+
+Exit Briefing
+Subject: <PROJECTNAME> Security Assessment Exit Briefing
+Location: Telecon and AT&T Connection: Information below
+Required: Security Assessor(s), Ryan, PMs and technical team members
+Optional: PM Division Chiefs
+FYI: Sharon Rogers
+The purpose of this meeting is to review the preliminary results from the <PROJECTNAME> security assessment.  We will send a presentation with the results in advance of the meeting. I will also identify a conference room and update the invitation.
+Please let me know if there are questions or concerns that I can address in the meantime.  Thanks.
+To connect to the Web Conference:
+=============================
+Click here: https://connect16.uc.att.com/uscourts/meet/?ExEventID=89135177
+TO CONNECT WITH YOUR *TELEPHONE ONLY* (no computer):
+===================================================
+1. Choose one of the following numbers to dial:
+If you are calling from an office location with on-site number(s) (listed below), try this number first. If you do not have on-site access, or you are not a member of the host's company/organization, use one of the other numbers shown.
+* Toll-Free Number (in USA): (877)336-1828.
+* Caller-Paid number: (404)443-6396
+* Blackberry (Toll-Free Number): 8773361828x9135177#
+2. When prompted, enter the Meeting Access Code: 9135177#
+------------------------------------------------------------------------------
+
+

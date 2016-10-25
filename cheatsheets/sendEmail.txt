@@ -1,0 +1,15 @@
+sendEmail Script
+$ sendEmail \
+-f newsletter@somedomain.com \
+-t "Newsletter <newsletter@somedomain.com>" \
+-bcc \
+subscriber@a.com \
+subscriber@b.com \
+subscriber@c.com \
+-u Monthly Newsletter \
+-m This is your monthly newsletter.  To unsubscribe click here. \
+-s mail.yourisp.net
+
+
+ sendemail -t "Officer Friendly<todd_benson@ao.uscourts.gov>" -u Housecleaning -s smtp.uscmail.dcn -cc "Ryan Stinson <ryan.stinson@ao.uscourts.gov>" -o message-file=/home/samurai/message.body -f "PACTS Administrator <pacts.adm@ao.uscourts.gov>"
+

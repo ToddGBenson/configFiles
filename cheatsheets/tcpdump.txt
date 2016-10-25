@@ -1,0 +1,1 @@
+tcpdump -nn -i -w -v -X (run as root) [ host, net, src, dst, port, portrange]

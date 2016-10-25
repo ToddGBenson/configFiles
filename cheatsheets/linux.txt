@@ -1,0 +1,68 @@
+Grep –i
+
+Man –k or apropos (searches for key works in the man description)
+
+Strings [-e] [-l, -b]
+
+Tr (translate)  tr "<orig>" "<new>"
+Sort -n (numeric) -r (reverse) -f (case insensitive)
+Uniq -c (count) -u (only lines not repeated) -I (case insensitive) (note: only adjacent lines)
+
+
+
+
+Up/Down arrows – scroll through history
+
+Home & End (ctrl+a & ctrl +e) – move cursor to the beginning or end of the command line
+
+Ctrl + u – clears line before the cursor
+
+Ctrl + k – clears line after the cursor
+
+Ctrl + w – deletes the word before the cursor
+
+Ctrl + r – search history
+
+Tab – auto-completes
+
+Alt + b/f – moves cursor back or forward a word
+
+!<command> - runs last command in history that contained command
+
+!<command>:p – shows last command in history that contained command 
+
+Sudo !! – runs last command with root privileges
+
+!! – repeats last command
+
+!$ - different command with the same argument
+
+!<#> - runs the corresponding command in the history
+
+!!:gs/<source>/<new> - run last command replacing source with new
+
+  
+Useful Aliases
+
+alias brpm=’rpm –Uvh ./*rpm’
+
+alias findbig="find . -type f -exec ls -s {} \; | sort -n -r | head -5"
+ 
+alias up='cd ..'
+ 
+alias benson='cd /home/benson/'
+ 
+alias repin=’ssh <server ipaddr> -l benson’
+ 
+alias psx=’ps –auxw|grep $1’
+ 
+function cdl { cd $1; ls;}
+ 
+function rab { ls *|grep -v $1 |xargs rm -rf; }
+ 
+# mkdir, cd into it
+mkcd () {
+mkdir -p "$*"
+cd "$*"
+}
+

@@ -1,0 +1,2 @@
+List ciphers available: openssl ciphers -v 'SSLCipherSuite ALL:!ADH:!SSLv2:!EXPORT56:!EXPORT40:!RC4:!DES:+HIGH:+MEDIUM:+EXP'
+

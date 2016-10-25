@@ -1,0 +1,39 @@
+To update Metasploit - Msfupdate
+
+To start Metasploit - msfconsole
+
+To connect to the default database in Backtrack 5 - Db_connect –y /opt/metasploit/config/database.yml
+
+Nessus
+	· load Nessus
+	· Nessus_Connect
+	· Nessus_report_list
+	· Nessus_report_get
+
+DB Commands
+	· Hosts
+	· Services
+	· Vulns
+	· Creds
+	· Loot
+	 
+To delete a workspace - Workspace -d 
+
+To add a workspace - Workspace -a
+
+To run nmap and import results into the database - Db_nmap -sV 192.168.31.133
+
+To find a module to run - Search <string>
+
+To get information on a module - Info
+
+To show module options - Show options
+
+To set RHOST globally - Set -g RHOST
+
+To run a session as a job - Exploit -j
+
+To interact with sessions - Sessions -i
+
+To push a active session to the background - ctrl-z
+

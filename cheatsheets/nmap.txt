@@ -1,0 +1,18 @@
+run as root.  Linux is preferable because of the access root has to the IP stack
+
+nmap-services file has the list of the most frequent ports to scan
+
+--reason in nmap gives reason why nmap came to it's conclusion about the port's state
+
+Nmap -n -v -O -sV -sC -sO <filename> --reason -open <ipadder>
+
+Nmap -T4 -sTUV -O -iL <ipadders>
+
+Nmap -T4 -PN -n -max_rtt_timeout 200 -initial_rtt_timeout 150 -sSUV -O -oA <filename> -iL <hosts>
+
+Ndiff?
+
+Nmap -sC -p1-65535 -T4 -oA <filename> <hosts>
+
+Nmap -sV -script=exploit,vuln,auth,default -oX <filename> <ipadder>
+

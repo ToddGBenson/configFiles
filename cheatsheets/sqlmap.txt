@@ -1,0 +1,55 @@
+Options:
+	-v
+	-h
+
+Target:
+	-d DIRECT
+	-u URL            URL of target
+	-r REQUESTFILE        Use a request file
+	-l LIST            Use Burp logs
+
+Requests:
+	--data=DATA        data to inject
+	--cookie=COOKIE        cookie to use
+	--scope=SCOPE
+
+Injection:
+	-p PARAMETER	
+	--dbms=DBMS
+	--os=OS
+	--prefix=PREFIX
+	--suffix=SUFFIX
+	--tamper=TAMPER
+
+Detection:
+	--level=LEVEL        (1-5)
+	--risk=RISK 	     (0-3)	
+	--string=STRING        
+	--regex=REGEX
+
+Technique:
+	--technique=BEUST    Boolean, Error, Union, Stacked query, Timing
+
+Enumeration:
+	--current-user        
+	--current-db
+	--users
+	--passwords
+	--dbs
+	--tables
+	--columns
+	--dump (all)
+	--replicate
+	--search
+	-D DB
+	-T TABLES
+	-C COLUMNS
+	--sql-query
+	--file-read=FILE 
+
+General
+	-s SESSIONFILE
+	--flush-session
+	--update
+	--save
+

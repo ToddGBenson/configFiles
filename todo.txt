@@ -1,0 +1,7 @@
+Add pentest scripts
+
+Cheatsheets:
+meterpreter
+Proxychains
+VIM
+eMacs

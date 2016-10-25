@@ -1,0 +1,60 @@
+C:\> tasklist				List currently running processes
+C:\> tasklist /m			List currently running processes and the DLLs each has loaded
+C:\> tasklist /m [dll]			List all processes currently running which have the specified DLL loaded
+C:\> tasklist /svc			List all processes currently running and the services hosted in those processes
+C:\> shutdown /s /t 0 			Shutdown Windows immediately
+C:\> shutdown /r /t 0  			Restart Windows immediately
+C:\> shutdown /a 			Abort shutdown/restart
+C:\> type [file] | find /I "[string]"	Search for a given string in the file
+C:\> ipconfig /displaydns		Dump DNS cache
+C:\> arp -a				Dump the ARP cache
+C:\> net use \\[targetIP] /del		Drop SMB session
+C:\> dir /b /s [Directory]\[FileName]  	Search directory structure for a file 
+C:\> [Command] | find /c /v "" 		Count the number of lines on StandardOut
+
+Reg
+C:\> reg query [KeyName]					Read Registry keys
+C:\> reg add [KeyName] /v [ValueName] /t [type] /d [Data]	Add/overwrite Registry key
+C:\> reg export [KeyName] [filename.reg]			Grabs a series of settings from the Registry
+C:\> reg import [filename.reg]					Import registry key setting from a file
+
+Netstat/Netsh
+C:\> netstat -nao   						Show all TCP and UDP port usage and process ID
+C:\> netstat -nao [N] | find [port]  				Look for usage of port every [N] seconds
+C:\> netstat -s -p [tcp|udp|ip|icmp]				Dump detailed protocol statistics
+C:\> netsh firewall set opmode disable				Turn off the Windows firewall
+C:\> netsh firewall show config					View the complete firewall settings
+C:\> netsh [interface] ip set address local static [IPAddr] [Netmask] [DefaultGW] 1  	Configure interface “Local Area Connection”
+C:\> netsh interface ip set dns local static [IPAddr]  		Configure DNS server
+C:\> netsh interface ip set addresslocal dhcp			Configure interface to use DHCP
+C:\> netsh firewall add portopening protocol = [protocol] port = [port] name = [comment] scope = custom address = [allowed_source_IP/cidr]	Allow inbound traffic on a given port
+C:\> netsh firewall del portopening protocol = [TCP|UDP] port = [portnum]	Delete firewall rule
+
+SC
+C:\> sc query							Query a brief status of all services
+C:\> sc qc [ServiceName]					Query the configuration of a specific service
+C:\> sc query state=all						List all services running
+C:\> sc \\[targetIP] query					Query services on a remote system
+C:\> sc start [service_name]					Start a service
+C:\> sc config [service_name] start= demand			Change a service start type
+C:\> sc stop [service_name]					Stop a service
+
+Net Use
+C:\> net user							List of all users defined on the system
+C:\> net localgroup						List of all groups created on the system
+C:\> net localgroup administrators				List member of the group administrators
+C:\> net user [logon_name] [password] [/add | /del ]		Add or delete a user to the system
+C:\> net use \\[targetIP] [password] /u:[user]			Set up a SMB session
+C:\> net use * \\[targetIP]\[share] [password] /u:[user]	Mount a share
+
+
+Add WMIC
+ 
+For Loops: 
+C:\> for /L %i in
+([start], [step], [stop]) do [command]
+ 
+C:\> for /F %i in ([file-set]) do [command]
+ 
+http://ss64.com/nt/
+
