@@ -1,0 +1,131 @@
+# Text Entry Commands(Used to start text entry)
+
+• a Appends text following current cursor position
+• A Appends text to the end of current line
+• i Inserts text before the current cursor position
+• I Inserts text at the beginning of the cursor line
+• o Opens a new line above  the current line and add text there
+• O Opens up a new line below  the current line and add text there
+
+# Cursor Movement Commands
+
+• H Moves the cursor one character to the left
+• L Moves the cursor one character to the right
+• K Moves the cursor up one line
+• J Moves the cursor down one line
+• nG or :n Cursor goes to the specified (n) line   (ex. 10G goes to line 10)
+• ^F (CTRl F) Forward screen
+• ^B Backward screen
+• ^f One page forward
+• ^b One page backward
+• ^U Up half screen
+• ^D Down half screen
+• $ Move cursor to the end of current line
+• 0(zero) Move cursor to the beginning of current line
+• w Forward one word
+• B Backward one word
+
+# Copy
+
+• The command ‘Y’ or ‘yy’ copies (yanks) one or more lines. To copy one line, two lines, 10 lines, and all lines to the end of the file, respectively, we can use following commands: Y, 2Y, 10Y, yG
+• It is also possible to yank text within a line. The following commands yank text from the current cursor position to the end of the word and the end of the line, respectively: yw, y$
+• The same commands paste the text within a line. Lower case p pastes after the cursor position and upper case P pastes before.Paste will also work with deleted text, either lines or parts of lines.
+
+Be careful not to execute any other commands prior to pasting as this will empty the buffer.
+
+# Copy using visual mode
+
+• Press esc to confirm that you are in normal mode.
+• Press shift+v (Visual Line) to start with visual mode. v will just enable visual mode, ctrl+v will enable visual block and shift+v will enable Visual Line. (to copy lines visual line mode would be handy)
+• Select lines using arrow key then press yy to yank. y to yank and p to paste (edited. Thanks to Srikanth Doss for correcting it)
+
+# Paste
+
+• To paste the text contained in the buffer above (uppercase P) or below the current cursor position (lowercase p), respectively: P, p
+
+# cut/copy/delete/paste lines without knowing the actual number of lines (Very useful one)
+
+If you ever need to cut/copy/delete/paste lines without knowing the actual number of lines, here is what you should do.
+
+• In normal mode, go to the beginning of the section that you want to yank.
+• Type mkto mark this spot as k.
+• Go to the end of the section you want to yank using whatever movement commands you like.
+• Type: y'k(y for yanking, single quote for go to mark option and  k is like giving a cross sign to the spot for our recognition ) :To yank from the mark to the current location.
+• You can paste those lines wherever you want with p or P
+
+Similarly, d'kwill cut/delete the lines from the current location to the mark.
+
+# Searching something
+
+• :/search string in present file forward (press esc in opened file and then type)
+• :?search string in present file backward
+• use n to find the next match, or N for previous match.  (When done with above two commands no  get used of it )
+
+# Replacing word, character or line
+
+• r Replace one character at the cursor position
+• R is used overstrike or replace mode. (use ESC key to exit from this mode)
+• cw Changes current word to a new word (It will clear that word and you can write new word)
+• Change from cursor to end of line C
+• Change entire line cc  (It  will clear out the entire line seems like dd but dd deletes/cuts it does not so you can’t apply paste on this action)
+
+# Text Deletion Commands (use only after pressing esc button)
+
+• x Delete character
+• dw Delete word from cursor on
+• db Delete word backward
+• dd Delete line
+• d$ Delete to end of line
+• d^ (d caret, not CTRL d) Delete to beginning of line
+• dL -> deletes till the visible screen
+• dG -> deletes till the end of a file
+
+# Brace Matching
+
+If the cursor is on an opening parenthesis { [ (, the command %will move the cursor to the matching closing } ] )in the normal mode, and vice versa. 
+
+# Keyword Matching
+
+If you are as lazy as me, you will find this function wonderful :)
+In insert mode, you can type a few characters of a word, e.g., if there is a variable called jassi_intro_users, you may just type jass then Ctrl+p. Vim will find out the last word in the file started with characters jass, if it is not you want, you can re-type Ctrl+p to match the further previous ones.
+Similarly, Ctrl+n can do that for finding the next matches. Therefore you do not worry about the mistyping of the long variables, or uncommon-used words. 
+
+# Saving File
+
+• :wq writes files and exit
+• ZZ :x    write file if updated and exit otherwise similar to :wq
+• ZQ   :q! don't write and exit
+• :q   quite the current window
+• :w   just write/save file, don't exit
+
+# Recovering files When system goes mad
+
+When you edit an important file and suddenly there is a power outage. All system is shutdown before you can save your source (UPS didn’t work?).  Don't be sad because Vim provides a recovering mechanism. There will be  a file called .pentium.v.swp if you were editing a file called pentium.v
+
+Recover it with Vim command, open .swp file, check if everything is there or not.
+
+vim -r .pentium.v.swp and see if it contains the source That you wrote . If everything seems fine to you, then save it and  then remove the swap file .filename.swp.
+
+# Jumping Between Multiple Windows
+
+• To split the window you can use Ctrl+w s, or start Vim initially
+• vim -o *.c
+• or inside vim write :split filename (horizontal split) and :vsplit filename for vertical split
+• Jumping between the sub-windows, use Ctrl+w plus arrow key to switch the cursor.
+• Left and right arrow key to move cursors between vertically split files.
+• Up and down arrow key to move cursors between Horizontally split files
+
+# Other Useful Commands (All in Escape mode only)
+
+• Type Ctrl+g and Vim will report the filename, the status (modified or readonly), total number of lines and the cursor position.
+• esc+i or shift+c will put insert mode
+• u Undo last change
+• U Restores line or al changes
+• J Joins next line down to the end of the current line
+• . Repeats last command
+• Use “:set nu” or “:set number” to set number in vim (after pressing esc button)
+• Prepend a character
+	• Enter visual block mode (ctrl -v)
+	• Select lines
+	• Insert (shift -I and character to insert)
+	• Esc
