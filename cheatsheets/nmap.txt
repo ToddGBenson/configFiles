@@ -16,3 +16,210 @@ Nmap -sC -p1-65535 -T4 -oA <filename> <hosts>
 
 Nmap -sV -script=exploit,vuln,auth,default -oX <filename> <ipadder>
 
+Scan Phases
+- Target expansion
+- Host enumeration
+- Reverse DNS resolution
+- Port scanning
+- Version detection
+- OS detection
+_ Traceroute
+- Script scanning
+- Output
+
+nmap <target>
+
+nmap -sn <target>
+
+nmap -p 80 --script http-chrono --script-args http-chrono.tries=10 <target>
+_____
+** Target expansion
+
+nmap -sL List Scan - NMap performs its target expansion phase without actually scanning
+
+nmap -sL <filename> Targets in the filename
+_____
+** Reverse DNS resolution
+
+-n Diasbles reverse DNS resolution
+
+-R enables reverse DNS resolution for every target IP address
+
+-p specifies port
+
+--top-ports <number> specifies the top x number of ports
+
+http* looks for a number of http ports
+_____
+** Output
+
+Press <eneter> to get a current status
+
+--reason States why a port was designated as opened
+
+--open
+
+-o N - Normal, X XML, G grepable <filename>
+_____
+** Host enumeration
+
+*** UDP and ICMP
+-PE echo request
+
+-PP timestamp request
+
+-PM address mask request
+
+-PU<number> UDP port enumeration to generate an ICMP response
+
+*** TCP
+-PS<number> Sends SYN packet (half open scanning)or host responds with a RST packet
+
+-PA<number> Sends SCK packet; host responds with RST packet
+
+-Pn disables host enumeration step
+_____
+** traceroute
+
+--traceroute
+_____
+** Port scanning
+
+Possible results: Open, Closed, Error, No Response
+
+-s U,S,T,N,F,X,A
+
+-sU UDP port scan
+
+-sS Half open scanning. Attempts a SYN connect and send RST if a reply (default as root) 
+
+-sT Connect scan. Attempts 3-way handshake and terminates
+
+-sN Null
+
+-sF Fin
+
+-sX Xmas
+
+-sA ACK. Sends an ACK packet, gets a RST packet back
+
+-sn Disables port scanning phase
+_______
+** Performance and timing
+
+--max-retries <retries>
+
+--initial-rtt-timeout <time>
+
+--min-rtt-timeout <time>
+
+--max-rtt-timeout <time>
+
+--host-timeout <time>
+
+--scan-delay <time>
+
+--max-scan-delay <time>
+
+--min-hostgroup <numOfHosts>
+
+--max-hostgroup <numOfHosts>
+
+--min-parallelism <numOfProbes>
+
+--max-parallelism <numOfProbes>
+
+--min-rate <rate>
+
+--max-rate <rate>
+
+-T <0-5> Timing templates (paranoid, sneaky, polite, normal, aggressive, insane)
+
+-T 3 for Internet scans
+-T 4 for internal scans
+-T 2 can take 10 times longer than -T 3
+_____
+** Evasion
+
+-sI Idle scan; <zombieHost:probe port>
+
+
+-S source-address, -e interface
+
+--spoof-mac
+
+-D decoy1
+______
+** Version detection
+
+- service protocol, application name, version number, hostname
+
+
+- Device type, OS family
+
+-sV enables version detection
+--version-intensity<0-9>
+--version-(light|all)
+
+** OS Detection
+
+-O
+--osscan-limit disables detections if it can not find one open and one closed port
+--osscan-guess, --fuzzy tells nmap to be more aggressive when guessing
+--max-os-tries <num> (default=5)
+_____
+** Scripting engine
+
+-sC 
+
+--script=scripts, script-categories
+--script-args arg1=val1,arg2-val2
+
+Categories
+auth     broadcast     brute    default
+discovery dos    exploit    external
+fuzzer    intrusive   malware   safe
+version  vuln
+
+nmap -p http* 10.37.128.0/24 --open -sC --script=http-headers
+
+
+nmap -sn -n 192.168.25.0/24 <- Discover hosts, disable port scanning
+nmap -sn -n 192.168.25.0/24 | awk '/scan report/ {print $5}' <- same as above, only outputing IOP addresses
+
+nmap -p 80 --traceroute 192.168.25.244
+nmap -p 80 --traceroute 192.168.130.254
+
+nmap -sS -iL ip.lst -oN ports.tcp <- half open scan on common ports
+
+nmap -sU -iL ip.lst -oN ports.udp <- same on UDP ports
+
+nmap -p 22,80,443,8080,8081 -sV -O 192.168.130.99|less <- versioning and OS detection
+
+nmap -p 8080 --script http-enum 192.168.120.99 <- look at folders
+
+nmap -p 8080 --script http-title 192.168.120.99 <- looks at the title
+
+nmap -p 1433 --script ms-sql-info 192.168.25.148 <- looks at MS SQL server
+
+nmap -p 1433 --script ms-sql-empty-password 192.168.25.148 <- check for empty passwords
+
+nmap -sA -p -1024 www.cnn.com <- ACK scan, maps firewall rule sets
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
