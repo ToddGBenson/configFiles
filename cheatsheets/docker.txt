@@ -1,0 +1,19 @@
+docker pull <container>
+
+docker run --rm -it -v <local path>:<mount point> <container>
+
+docker inspeck <container>
+
+docker ps -a
+
+docker images
+
+docker rm <instance>
+
+docker rmi <image>
+
+docker rm $(docker ps -a -q)
+
+docker rmi $(docker images -q)
+
+docker build -t <tag> .

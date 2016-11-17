@@ -1,0 +1,16 @@
+
+# concourse
+
+# alias a target
+
+fly --target <name> login --concourse-url http://192.168.100.4:8080
+fly -t <name> sync
+
+cat ./.flyrc
+
+# pipeline
+
+fly -t <name> sp -c <pipeline.yaml> -p <pipelinename>
+
+fly destroy-pipeline -t <name> -p <pipelinename>
+

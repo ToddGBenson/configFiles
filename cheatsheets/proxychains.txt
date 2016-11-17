@@ -1,0 +1,12 @@
+# Proxychains
+
+In /etc/proxychains.conf:
+
+    Comment out proxy_dns
+    Add socks4 127.0.0.1 8888
+
+At command prompt:
+    ssh -D 127.0.0.1:8888 user@target
+
+New window:
+    proxychains command target
