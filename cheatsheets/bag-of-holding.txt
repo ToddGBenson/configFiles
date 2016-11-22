@@ -1,0 +1,14 @@
+
+# Install steps
+
+apt-get update
+apt-get -q -y install git python-setuptools python-dev build-essential mysql-server libmysqlclient-dev
+easy_install pip
+git clone https://github.com/aparsons/bag-of-holding.git /opt/bag-of-holding
+cd /opt/bag-of-holding/
+pip install -r requirements.txt
+python /opt/bag-of-holding/project/manage.py makemigrations
+python /opt/bag-of-holding/project/manage.py migrate
+python /opt/bag-of-holding/project/manage.py loaddata /opt/bag-of-holding/project/sample_data.json
+python /opt/bag-of-holding/project/manage.py createsuperuser
+python /opt/bag-of-holding/project/manage.py runserver 0.0.0.0:8000

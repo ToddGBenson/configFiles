@@ -1,39 +1,130 @@
-To update Metasploit - Msfupdate
 
-To start Metasploit - msfconsole
+# msfconsole commands
 
-To connect to the default database in Backtrack 5 - Db_connect –y /opt/metasploit/config/database.yml
+- search
+- use
+- show options
+- info
+- set and setg
+- check
+- run/exploit
+- help
 
-Nessus
-	· load Nessus
-	· Nessus_Connect
-	· Nessus_report_list
-	· Nessus_report_get
 
-DB Commands
-	· Hosts
-	· Services
-	· Vulns
-	· Creds
-	· Loot
-	 
-To delete a workspace - Workspace -d 
+DB Commnds
+- hosts
+- services
+- services -u
+- vulns
+- creds
+- loot
 
-To add a workspace - Workspace -a
+- db_nmap
+- db_import
 
-To run nmap and import results into the database - Db_nmap -sV 192.168.31.133
+- load openvas
 
-To find a module to run - Search <string>
+exploit -j  ; runs session as a job
+sessions -i ; interact with sessions
+ctrl -z     ; push active session to the background
+background  ; push active session to the background
 
-To get information on a module - Info
+______________________________________________________________________________
 
-To show module options - Show options
+# Utilities
 
-To set RHOST globally - Set -g RHOST
+msfcli (now msfconsole -x)
 
-To run a session as a job - Exploit -j
+msfvenom - msfencode and msfpayload
+______________________________________________________________________________
 
-To interact with sessions - Sessions -i
+# Finding value in data
 
-To push a active session to the background - ctrl-z
+Find target systems, enumerate services, gather version information, and find vulnerabilities
+
+Identify exploitable vulnerabilities
+
+1) Research
+ - Vulnerability and exploit databases
+   Vendor vulnerabilty notifications
+   Forums, config guides, vendor docs
+
+2) Validate findings
+3) Test and practice in the lab
+
+Resources
+
+searchsploit
+  --nmap <output.xml>
+______________________________________________________________________________
+
+# Suggested flow
+
+1) Collect data from all the tools
+2) Store the data based on need
+3) Sort and search the data to explore
+4) Research identified systems, network ports, and vulnerabilties
+5) Explore potential exploits in Metasploit Framework and exploit databases
+______________________________________________________________________________
+
+# Attacks
+
+Active
+- Target specific system with known and exploitable weaknesses in available services
+- Connect to the vulnerable service on the target
+- send exploit to the system
+- execute payload on the target
+
+Passive
+- Target specific users with suspected and common weaknesses in avilable clients
+- Wait until the client connects to our server
+- Feed exploits to vulnerable client
+- Execute payload on the client
+______________________________________________________________________________
+
+# Connection methods
+
+- Forward
+  - Connections are made to the target
+  - Assumes no security controls (such as a firewall)
+
+- Reverse
+  - Connection made from the target to the server
+  - Bypasses security controls
+
+- Fire and Forget/Blind
+  - No connections
+  - Outcome is unclear
+______________________________________________________________________________
+
+# Post-exploitation Activities
+
+- Determin the value of the target
+- Maintain control for later use
+- Gather information (Intellectural property, customer data, inernal operation)
+- Access (critical infrastructure, users)
+- Document all changes (script)
+- Enable access
+______________________________________________________________________________
+
+# Configuring an exploit
+
+1) Determine the exploit a payload to use
+2) Review the options with show options
+3) Review and set exploit options
+  - set RHOST
+  - set target
+  - set payload
+4) Review and set payload options
+  - set LPORT
+  - set LHOST
+5) exploit
+
+# Possible outcomes
+
+ - Shell prompt
+ - Transient failures (try again later)
+ - Errors and real failures
+
+
 
