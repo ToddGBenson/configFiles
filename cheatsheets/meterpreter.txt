@@ -83,3 +83,9 @@ keyscan_dump
 screenshot
 record_mic -h
 uictl -h
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> beabfbe2f62604d371135441113f7432e5b59bb9
