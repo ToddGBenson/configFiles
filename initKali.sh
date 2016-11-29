@@ -11,6 +11,7 @@ git clone https://github.com/danielmiessler/SecLists.git /opt/seclist
 git clone https://github.com/drwetter/testssl.sh.git /opt/testssl
 git clone https://github.com/ToddBenson/checkHeaders.git /opt/checkHeaders
 git clone https://github.com/leebaird/discover /opt/discover/
+git clone https://github.com/SpiderLabs/Responder /opt/responder/
 git clone https://github.com/gauntlt/gauntlt /opt/gauntlt
 git clone https://github.com/hak5darren/USB-Rubber-Ducky.git /opt/ducky
 git clone https://github.com/troyhunt/PineappleSurprise.git /opt/pineapple
