@@ -2,7 +2,7 @@ docker pull <container>
 
 docker run --rm -it -v <local path>:<mount point> <container>
 
-docker inspeck <container>
+docker inspect <container>
 
 docker ps -a
 
@@ -17,3 +17,15 @@ docker rm $(docker ps -a -q)
 docker rmi $(docker images -q)
 
 docker build -t <tag> .
+builds an image from a Dockerfile
+
+docker push <name> 
+sends image to docker hub
+
+docker commit <container> <repository:tag>
+commit - creates a new image from an existing container
+
+docker create
+create - creates a writeable container level over a specified image
+
+
