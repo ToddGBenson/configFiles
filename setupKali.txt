@@ -48,6 +48,11 @@ www.jython.org/downloads.html
 Download Jython Standalone Jar
 ------------------------------------------------------------------------------------------------------
 
+# JRuby
+
+DOwnload JRuby
+------------------------------------------------------------------------------------------------------
+
 # Firefox plugins (https://addons.mozilla.org/en-US/firefox/collections/anonymous-ea5ff367908de6c75a8d05682ffa36a1/security-tools/)
 
 Cookies Manager+
@@ -82,6 +87,8 @@ New project on disk > Choose file > burp-project > Save
 Name: Base
 Next
 Use Burp defaults > Start Burp
+
+Set up Burp user and project defaults
 ------------------------------------------------------------------------------------------------------
 
 # Certificate
