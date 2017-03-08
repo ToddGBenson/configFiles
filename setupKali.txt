@@ -115,13 +115,12 @@ usermod -a -G sudo <username>
 chsh -s /bin/bash <username>
 ------------------------------------------------------------------------------------------------------
 
-
 # Lan Turtle
 
 IP Address: 172.16.84.1
 
 Default username - root
-Defaulr password - sh3llz
+Default password - sh3llz
 
 Setup autoSSH
 ------------------------------------------------------------------------------------------------------
@@ -132,6 +131,20 @@ IP Address: 172.16.42.1
 
 Connect Pineapple to the computer
 Run /opt/pineapple/wp6.sh
+
+Setup autoSSH
+------------------------------------------------------------------------------------------------------
+
+# Bash Bunny
+
+IP Address: 172.16.64.1
+DHCP Range: 172.16.64.10-12
+
+Default username: root
+Default password: hak5bunny
+
+Connect Bash Bunny to the computer
+Run /opt/bunny/bb.sh
 
 Setup autoSSH
 ------------------------------------------------------------------------------------------------------
