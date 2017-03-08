@@ -15,9 +15,13 @@ git clone https://github.com/SpiderLabs/Responder /opt/responder/
 git clone https://github.com/gauntlt/gauntlt /opt/gauntlt
 git clone https://github.com/hak5darren/USB-Rubber-Ducky.git /opt/ducky
 git clone https://github.com/troyhunt/PineappleSurprise.git /opt/pineapple
+git clone https://github.com/hak5/bashbunny-payloads.git /opt/bunny
 cd /opt/pineapple
 wget wifipineapple.com/wp6.sh
 chmod +x /opt/pineapple/wp6.sh
+cd /opt/bunny
+wget bashbunny.com/bb.sh
+chmod +x /opt/bunny/bb.sh
 cd /opt/gauntlt
 source ./install_gauntlt_deps.sh
 cd /opt/discover
