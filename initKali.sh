@@ -17,6 +17,7 @@ git clone https://github.com/gauntlt/gauntlt /opt/gauntlt
 git clone https://github.com/hak5darren/USB-Rubber-Ducky.git /opt/ducky
 git clone https://github.com/troyhunt/PineappleSurprise.git /opt/pineapple
 git clone https://github.com/hak5/bashbunny-payloads.git /opt/bunny
+git clone https://github.com/1N3/Sn1per.git /opt/sniper
 cd /opt/pineapple
 wget wifipineapple.com/wp6.sh
 chmod +x /opt/pineapple/wp6.sh
@@ -27,6 +28,8 @@ cd /opt/gauntlt
 source ./install_gauntlt_deps.sh
 cd /opt/discover
 ./update.sh
+cd /opt/sniper
+./install.sh
 passwd
 echo "Tools installed:"
 ls /opt/
