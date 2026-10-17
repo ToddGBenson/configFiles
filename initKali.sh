@@ -22,17 +22,18 @@ git clone https://github.com/hak5darren/USB-Rubber-Ducky.git /opt/ducky
 git clone https://github.com/troyhunt/PineappleSurprise.git /opt/pineapple
 git clone https://github.com/hak5/bashbunny-payloads.git /opt/bunny
 git clone https://github.com/1N3/Sn1per.git /opt/sniper
-cd /opt/pineapple
-wget wifipineapple.com/wp6.sh
+cd /opt/pineapple || exit 1
+wget https://wifipineapple.com/wp6.sh
 chmod +x /opt/pineapple/wp6.sh
-cd /opt/bunny
-wget bashbunny.com/bb.sh
+cd /opt/bunny || exit 1
+wget https://bashbunny.com/bb.sh
 chmod +x /opt/bunny/bb.sh
-cd /opt/gauntlt
+cd /opt/gauntlt || exit 1
+# shellcheck source=/dev/null  # cloned at run time above
 source ./install_gauntlt_deps.sh
-cd /opt/discover
+cd /opt/discover || exit 1
 ./update.sh
-cd /opt/sniper
+cd /opt/sniper || exit 1
 ./install.sh
 passwd
 echo "Tools installed:"
